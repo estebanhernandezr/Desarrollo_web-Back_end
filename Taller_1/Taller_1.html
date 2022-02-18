@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Calculadora en JS</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="">
+
+        <link rel="stylesheet" href="./Taller_1.css">
+        <!--BOOTSTRAP-->
+        <link rel="stylesheet" href="../CSSCodes/Hoja_de_vida.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+        <script src="./Taller_1.js">
+            alert("This alert box was called with the onload event");
+        </script>
+        <!--BOOTSTRAP-->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container" id="hero">
+            <div class="row" id="fila_1">
+                <div class="barra col-12 col-sm-12 col-lg-12" id="barra">
+                    <input type="number" id="barra_numerica">
+                </div>
+            </div>
+            <form action="">
+                <div class="row" id="fila_2">
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="siete">
+                        <button value="7" id="siete_b">7</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="ocho">
+                        <button value="8" id="ocho_b">8</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="nueve">
+                        <button value="9" id="nueve_b">9</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="mas">
+                        <button>+</button>
+                    </div>
+                </div>
+                <div class="row" id="fila_3">
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="cuatro">
+                        <button value="4" id="cuatro_b">4</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="cinco">
+                        <button value="5" id="cinco_b">5</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="seis">
+                        <button value="6" id="seis_b">6</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="menos">
+                        <button>-</button>
+                    </div>
+                </div>
+                <div class="row" id="fila_4">
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="uno">
+                        <button value="1" id="uno_b">1</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="dos">
+                        <button value="2" id="dos_b">2</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="tres">
+                        <button value="3" id="tres_b">3</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3">
+                        
+                    </div>
+                </div>
+                <div class="row" id="fila_5">
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="cero">
+                        <button value="0" id="cero_b">0</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="dec">
+                        <button>.</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3" id="igual">
+                        <button>=</button>
+                    </div>
+                    <div class="tecla col-3 col-sm-3 col-lg-3">
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <script>
+            var cero = document.getElementById("cero_b");
+            var uno = document.getElementById("uno_b");
+            var dos = document.getElementById("dos_b");
+            var tres = document.getElementById("tres_b");
+            var cuatro = document.getElementById("cuatro_b");
+            var cinco = document.getElementById("cinco_b");
+            var seis = document.getElementById("seis_b");
+            var siete = document.getElementById("siete_b");
+            var ocho = document.getElementById("ocho_b");
+            var nueve = document.getElementById("nueve_b");
+
+            var barra = document.getElementById("barra_numerica");
+
+            cero.onclick = function() {
+                barra.setAttribute("value", "0");
+            }
+
+            uno.onclick = function() {
+                barra.setAttribute("value", "1");
+            }
+
+            dos.onclick = function() {
+                barra.setAttribute("value", "2");
+            }
+
+            tres.onclick = function() {
+                barra.setAttribute("value", "3");
+            }
+
+            cuatro.onclick = function() {
+                barra.setAttribute("value", "4");
+            }
+
+            cinco.onclick = function() {
+                barra.setAttribute("value", "5");
+            }
+
+            seis.onclick = function() {
+                barra.setAttribute("value", "6");
+            }
+
+            siete.onclick = function() {
+                barra.setAttribute("value", "7");
+            }
+
+            ocho.onclick = function() {
+                barra.setAttribute("value", "8");
+            }
+
+            nueve.onclick = function() {
+                barra.setAttribute("value", "9");
+            }
+        </script>
+
+    </body>
+
+</html>
