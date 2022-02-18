@@ -28,10 +28,10 @@
         <div class="container" id="hero">
             <div class="row" id="fila_1">
                 <div class="barra col-12 col-sm-12 col-lg-12" id="barra">
-                    <input type="number" id="barra_numerica">
+                    <input type="text" id="barra_numerica" disabled>
                 </div>
             </div>
-            <form action="">
+            <!--<form action="">-->
                 <div class="row" id="fila_2">
                     <div class="tecla col-3 col-sm-3 col-lg-3" id="siete">
                         <button value="7" id="siete_b">7</button>
@@ -43,7 +43,7 @@
                         <button value="9" id="nueve_b">9</button>
                     </div>
                     <div class="tecla col-3 col-sm-3 col-lg-3" id="mas">
-                        <button>+</button>
+                        <button value="+" id="mas_b">+</button>
                     </div>
                 </div>
                 <div class="row" id="fila_3">
@@ -57,7 +57,7 @@
                         <button value="6" id="seis_b">6</button>
                     </div>
                     <div class="tecla col-3 col-sm-3 col-lg-3" id="menos">
-                        <button>-</button>
+                        <button value="-" id="menos_b">-</button>
                     </div>
                 </div>
                 <div class="row" id="fila_4">
@@ -82,68 +82,17 @@
                         <button>.</button>
                     </div>
                     <div class="tecla col-3 col-sm-3 col-lg-3" id="igual">
-                        <button>=</button>
+                        <button value="=" id="igual_b">=</button>
                     </div>
                     <div class="tecla col-3 col-sm-3 col-lg-3">
                         
                     </div>
                 </div>
-            </form>
+            <!--</form>-->
         </div>
         
-        <script>
-            var cero = document.getElementById("cero_b");
-            var uno = document.getElementById("uno_b");
-            var dos = document.getElementById("dos_b");
-            var tres = document.getElementById("tres_b");
-            var cuatro = document.getElementById("cuatro_b");
-            var cinco = document.getElementById("cinco_b");
-            var seis = document.getElementById("seis_b");
-            var siete = document.getElementById("siete_b");
-            var ocho = document.getElementById("ocho_b");
-            var nueve = document.getElementById("nueve_b");
-
-            var barra = document.getElementById("barra_numerica");
-
-            cero.onclick = function() {
-                barra.setAttribute("value", "0");
-            }
-
-            uno.onclick = function() {
-                barra.setAttribute("value", "1");
-            }
-
-            dos.onclick = function() {
-                barra.setAttribute("value", "2");
-            }
-
-            tres.onclick = function() {
-                barra.setAttribute("value", "3");
-            }
-
-            cuatro.onclick = function() {
-                barra.setAttribute("value", "4");
-            }
-
-            cinco.onclick = function() {
-                barra.setAttribute("value", "5");
-            }
-
-            seis.onclick = function() {
-                barra.setAttribute("value", "6");
-            }
-
-            siete.onclick = function() {
-                barra.setAttribute("value", "7");
-            }
-
-            ocho.onclick = function() {
-                barra.setAttribute("value", "8");
-            }
-
-            nueve.onclick = function() {
-                barra.setAttribute("value", "9");
-            }
+        <script src="./Taller_1.js">
+            alert("RAISE VALUE ERROR");
         </script>
 
     </body>
