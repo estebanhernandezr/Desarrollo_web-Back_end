@@ -9,6 +9,8 @@ var siete = document.getElementById("siete_b");
 var ocho = document.getElementById("ocho_b");
 var nueve = document.getElementById("nueve_b");
 
+var dec = document.getElementById("dec_b");
+
 var barra = document.getElementById("barra_numerica");
 
 var mas = document.getElementById("mas_b");
@@ -63,6 +65,10 @@ menos.onclick = function() {
     barra.setAttribute("value", barra.value+"-");
 }
 
+dec.onclick = function() {
+    barra.setAttribute("value", barra.value+".");
+}
+
 igual.onclick = function() {
     let cadena = barra.getAttribute("value");
     /*EXTRACT ALL OPERANDS FROM THE STRING AND THEIR SIGN*/
@@ -84,7 +90,7 @@ igual.onclick = function() {
     }
 
     /*SUM ALL ELEMENTS IN THE ARRAY*/
-    suma = 0
+    let suma = 0
     for (let idx = 0; idx < operandos.length; idx++) {
         let operando = operandos[idx];
         if (operando.length) {
