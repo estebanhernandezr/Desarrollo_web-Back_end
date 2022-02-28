@@ -195,4 +195,4 @@ $(document).ready(function () {
     main();
 });
 
-// TERCER CHECKPOINT!
+// CUARTO CHECKPOINT!
