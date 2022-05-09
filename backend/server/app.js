@@ -16,7 +16,8 @@ const app = express();
 /*BODY*/
 app.use(cors());
 app.use(express.json());
-app.use(require('./routes/messenger_routes'));
+app.use(require('./routes/messenger_routes')); // <-----------WATCH OUT HERE!
+//app.use(require('./routes/project_routes')); // <-----------WATCH OUT HERE!
 
 app.use(function(err, _req, res, next) {
     console.error(err.stack);
@@ -34,13 +35,5 @@ database.connect_to_server(function(err) {
     app.listen(port, () => {
         console.log(`Server is running on port: ${port}`);
         console.log('----> Just checking everything works correctly here <----');
-        /*scrapper.get_scrapped_data().then(val => {
-            console.log(val)
-            let movies = val['entries'];
-            movies.forEach(movie => {
-                database.insert(movie);
-            });
-            console.log('----> Aquí terminamos <----');
-        });*/
     });
 });

@@ -10,7 +10,9 @@ const setter = require('../javascript/setstate_logic'); // <-----------WATCH OUT
 const routes = express.Router();
 
 /* CONSULTAR ENVIO (POR CODIGO DE ENVIO) */
-routes.route('/consult/:codigo_envio').get((req, res) => {
+routes.route('/consult/:tipo_consulta/:codigo_envio').get((req, res) => {
+    console.log("CONSULT: "+req.params.tipo_consulta);
+    console.log("CODIGO: "+req.params.codigo_envio);
     try {
         consulter.consult_envio(req, res);
         console.log("Sucessfull consulting!");
@@ -35,7 +37,9 @@ routes.route('/consult_all').get((req, res) => {
 });
 
 /* ESTABLECER ESTADO DEL ENVIO (POR CODIGO DE ENVIO) */
-routes.route('/set_estado/:codigo_envio').put((req, res) => {
+routes.route('/set_estado/:codigo_envio/:estado').put((req, res) => {
+    console.log("ESTADO: "+req.params.estado);
+    console.log("CODIGO: "+req.params.codigo_envio);
     try {
         setter.set_estado(req, res);
         console.log("Sucessfull setting!");
@@ -48,6 +52,7 @@ routes.route('/set_estado/:codigo_envio').put((req, res) => {
 });
 /* REGISTRAR UN NUEVO ENVIO Y SU CODIGO (DADA SU DESCRIPCION JSON) */
 routes.route('/send').post((req, res) => {
+    console.log(req.body);
     try {
         sender.send(req, res);
         console.log("Sucessfull insertion!");

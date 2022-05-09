@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "50dac430-2d25-4de9-8fb8-d4528c8cc887",
+		"name": "Messenger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload_csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/User/Desktop/Desarrollo web/Taller prácticos/Mensajería/data/envios_datos_cedulas.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/upload_csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"upload_csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consult_cod_envio",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo_envio\": \"ORD00007\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/consult/code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consult",
+						"code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consult_cedula",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cedula\": \"1007658075\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/consult/cedula",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consult",
+						"cedula"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set_estado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"estado\": \"En camino\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/set_estado/ORD00002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"set_estado",
+						"ORD00002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_emisor\": \"Juan José Hernández Ramírez\",\r\n    \"email_emisor\": \"juanjo.hernandezr@urosario.edu.co\",\r\n    \"calle_emisor\": \"manzana M, casa 30. Barrio Tolima Grande\",\r\n    \"ciudad_emisor\": \"Ibagué\",\r\n    \"provincia_emisor\": \"Tolima\",\r\n    \"pais_emisor\": \"Colombia\",\r\n    \"nombre_receptor\": \"Nicolás Hernández Ramírez\",\r\n    \"email_receptor\": \"nicolas.hernandezr@urosario.edu.co\",\r\n    \"calle_receptor\": \"manzana Q, casa 18. Barrio Tolima Grande\",\r\n    \"ciudad_receptor\": \"Ibagué\",\r\n    \"provincia_receptor\": \"Tolima\",\r\n    \"pais_receptor\": \"Colombia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consult_all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/consult_all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consult_all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

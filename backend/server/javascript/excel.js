@@ -42,6 +42,8 @@ const local_upload = async function(req, res) {
                 provincia_receptor: row.address_to_province,
                 //postal_receptor: row.address_to_postal_code,
                 pais_receptor: row.address_from_country_code,
+                cedula_emisor: row.cedula_emisor,
+                cedula_receptor: row.cedula_receptor,
 
                 estado: "Cliente ha recibido paquete",
                 last_modified: new Date(),

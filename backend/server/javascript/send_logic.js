@@ -23,7 +23,7 @@ const send_register = async function(req, res) {
         estado: "Recibido",
         last_modified: new Date(),
     };
-
+    console.log(new_register);
     connection.collection(collection_name).count().then(val => {
         let tail = val.toString();
         for (let idx = 0; idx < 5-tail.length; idx++) {
@@ -35,7 +35,7 @@ const send_register = async function(req, res) {
             if (err) {
                 res.status(400).send({ message: `Error inserting the item!`});
             } else {
-                res.status(200).send({message: `Document inserted with code: ${new_register.codigo_envio}`});
+                res.status(200).send({nuevo_codigo: new_register.codigo_envio});
             }
         });
     });

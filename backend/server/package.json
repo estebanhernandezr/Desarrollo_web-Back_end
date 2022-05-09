@@ -4,11 +4,13 @@
   "description": "Server-side javascript functionality.",
   "main": "app.js",
   "scripts": {
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Esteban Hernández Ramírez",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
     "cheerio": "^1.0.0-rc.10",
     "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
